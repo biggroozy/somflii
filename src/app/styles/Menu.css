@@ -1,0 +1,17 @@
+.menu-top {
+}
+.menu-footer .link {
+  display: flex;
+}
+.menu {
+  display: flex;
+  gap: 60px;
+}
+.menu .link {
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.menu .link.active,
+.menu .link:hover {
+  color: var(--primary-color);
+}

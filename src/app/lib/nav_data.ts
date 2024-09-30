@@ -8,6 +8,10 @@ export const nav_data = [
     path: "/recipes",
   },
   {
+    name: "Blog",
+    path: "/blog",
+  },
+  {
     name: "About us",
     path: "/about-us",
   },

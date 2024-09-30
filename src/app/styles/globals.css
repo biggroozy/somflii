@@ -2,11 +2,11 @@
 
 /*COLORS*/
 :root {
-  --primary-color: #72d8c2;
-  --secondary-color: #2ecc71;
-  --accent-color: #e74c3c;
-  --text-color-white: #f0f0f0;
-  --text-color-dark: #333;
+  --primary-color: #caa8f5ff;
+  --secondary-color: #9984d4ff;
+  --accent-color-1: #592e83ff;
+  --accent-color-2: #230c33ff;
+  --accent-color-3: #b27c66ff;
 }
 /*BORDER RADIUS*/
 .borderin-1 {
@@ -45,5 +45,5 @@
   font-style: normal;
 }
 .df-padd {
-  padding: 0px 50px;
+  padding: 0px 80px;
 }

@@ -1,27 +1,19 @@
-"use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import React from "react";
-import { nav_data } from "../lib/nav_data";
-import "../styles/navbar.css";
-import styles from "../styles/boxes.module.css";
 import ButtonX1 from "./ButtonSignUp";
+import Logo from "./Logo";
+
+import styles from "../styles/boxes.module.css";
+import "../styles/navbar.css";
+import Menu from "./Menu";
 
 const Navbar = () => {
-  const pathname = usePathname();
   return (
     <section className="navbar df-padd">
-      <div className="navbar-logo"></div>
+      <div className="navbar-logo">
+        <Logo />
+      </div>
       <nav className={`navbar-nav ${styles.box_01}`}>
-        {nav_data.map((item, number) => (
-          <Link
-            key={number}
-            className={`link fs-3 ${pathname === item.path ? "active" : ""}`}
-            href={item.path}
-          >
-            {item.name}
-          </Link>
-        ))}
+        <Menu type={`menu menu-top`} />
       </nav>
       <div className="navbar-right">
         <ButtonX1
