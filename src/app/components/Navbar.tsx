@@ -2,36 +2,34 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import { nav_data } from "../lib/nav_data";
+import "../styles/navbar.css";
+import styles from "../styles/boxes.module.css";
+import ButtonX1 from "./ButtonSignUp";
 
 const Navbar = () => {
   const pathname = usePathname();
   return (
-    <section className="navbar">
+    <section className="navbar df-padd">
       <div className="navbar-logo"></div>
-      <nav className="navbar-nav">
-        <Link className={`link ${pathname === "/" ? "active" : ""}`} href="/">
-          Home
-        </Link>
-        <Link
-          className={`link ${pathname === "/recipes" ? "active" : ""}`}
-          href="/recipes"
-        >
-          Recipes
-        </Link>
-        <Link
-          className={`link ${pathname === "/about-us" ? "active" : ""}`}
-          href="/about-us"
-        >
-          About us
-        </Link>
-        <Link
-          className={`link ${pathname === "/contact" ? "active" : ""}`}
-          href="/contact"
-        >
-          Contact
-        </Link>
+      <nav className={`navbar-nav ${styles.box_01}`}>
+        {nav_data.map((item, number) => (
+          <Link
+            key={number}
+            className={`link fs-3 ${pathname === item.path ? "active" : ""}`}
+            href={item.path}
+          >
+            {item.name}
+          </Link>
+        ))}
       </nav>
-      <div className="navbar-right"></div>
+      <div className="navbar-right">
+        <ButtonX1
+          name="Sign Up"
+          path="/sign-up"
+          styles="btn-sign-up borderin-3 fs-4"
+        />
+      </div>
     </section>
   );
 };

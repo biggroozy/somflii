@@ -1,0 +1,6 @@
+.btn-sign-up {
+  padding: 15px 20px;
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--text-color-white);
+}

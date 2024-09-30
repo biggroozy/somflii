@@ -1,0 +1,23 @@
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  border-bottom: 1px solid #ccc;
+}
+.navbar-nav {
+  display: flex;
+  gap: 60px;
+}
+.navbar-nav .link {
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.navbar-nav .link.active,
+.navbar-nav .link:hover {
+  color: var(--primary-color);
+}
+
+.navbar-right {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
